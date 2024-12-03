@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maestro Detalle de Solicitudes</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
 </head>
 <body>
-
+    <script>
+        jQuery(document).ready(function(){
+            $("#Secreto").hide();
+        });
+    </script>
     <!-- Sección de Maestro -->
     <h2>Lista de Solicitudes</h2>
     <table border="1">
         <thead>
             <tr>
-                <th>ID</th>
+                <th id="Secreto">ID</th>
                 <th>Fecha</th>
                 <th>Estado</th>
             </tr>
@@ -38,6 +43,19 @@
 
     <!-- Sección de Detalle -->
     <h2>Detalle de Solicitud</h2>
+    <script>
+    jQuery(document).ready(function(){ 
+        /*$("button").click(function() { 
+            $("#detalle1").hide();
+        });
+        $("secreto2").click(function() { 
+            $("#detalle1").hide();
+        });*/
+        $(".secreto2").click(function() { 
+            $("#detalle1").hide();
+        });
+    }); </script>
+
     <div id="detalle1">
         <form>
             <label for="idSolicitud1">ID Solicitud:</label>
@@ -53,6 +71,18 @@
             <textarea id="descripcionSolicitud1" rows="4" cols="50" readonly>Descripción de la solicitud 1</textarea><br><br>
         </form>
     </div>
+       <script>jQuery(document).ready(function(){
+            $("#detalle1").show();
+        }); </script>
+
+    <button class='secreto2'> Ocultar el formulario </button>
+    <button> Dame clic </button>
+    <button class='secreto2'> Otro secreto </button>
+    <button> Dame clic </button>
+    <button> Dame clic </button>
+    <button> Dame clic </button>
 </body>
 </html>
+
+
 
